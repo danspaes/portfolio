@@ -1,0 +1,53 @@
+-- Invalid first and last name -- SEEMS TO WORK, BUT IS BRINGING 34 K
+select /* +(parallel,8) */ 
+* 
+from dw_user.rdw_d_cust_360
+where  regexp_like (UPPER(cust_f_name), '\d|\+|=|!|\$|#|\^|&|\*|\(|\)|\?|<|>|~|\/|;|:|\)|^REITMANS$|^REITMAN'||chr(39)||'S$|^DECLIN|CUSTOMER|STORE |UPSET|EMPLOY|GIFT|GIFT CARD|REFUSE|^SALE$|NO EMAIL|CARTE CADEAU|CADEAU|^TEST|NO NAME|^NO$|^NAME$|^CLIENT$') 
+or regexp_like (UPPER(cust_l_name), '\d|\+|=|!|\$|#|\^|&|\*|\(|\)|\?|<|>|~|\/|;|:|\)|^REITMANS$|^REITMAN'||chr(39)||'S$|^DECLIN|CUSTOMER|STORE |UPSET|EMPLOY|GIFT|GIFT CARD|REFUSE|^SALE$|NO EMAIL|CARTE CADEAU|CADEAU|^TEST|NO NAME|^NO$|^NAME$|^CLIENT$' ) 
+and cust_division_id = '17'
+;
+
+-- Return Customer Name + Jane doe matching
+select /* +(parallel,8) */ 
+       * from 
+dw_user.rdw_d_cust_360 
+where 
+      REGEXP_LIKE (UPPER(cust_f_name), 'RETURN|RETOUR|REFUND|^JANE$|^JOHN$|^JON$') 
+      AND REGEXP_LIKE (UPPER(cust_l_name), 'RETURN|RETOUR|REFUND|^RET$|^DOE$') 
+      AND CUST_NBR NOT IN ('3100471650', '3101120751')
+      and cust_division_id = '17'
+;
+
+-- first and last name 1 letter - NOT WORKING
+select /* +(parallel,8) */ *
+from dw_user.rdw_d_cust_360 
+where REGEXP_LIKE (cust_f_name, '(^[A-Z])\1\1') or 
+      REGEXP_LIKE (cust_l_name, '(^[A-Z])\1\1')
+and cust_div_nbr = '17'
+;
+
+-- emails TO VALIDATE - IT GIVES 39 BUT ON THE SHEET HAS 206
+select /* +(parallel,8) */ 
+      *
+      from dw_user.rdw_d_cust_360 
+where (REGEXP_LIKE (UPPER(cust_EMAIL),  '\@REITMANS\.COM|\@PENNINGTONS\.COM|\@THYMATERNITY\.COM|\@RW\-CO\.COM|\@ADDITION\-ELLE\.COM|\@SMARTSET\.CA') OR 
+REGEXP_LIKE (UPPER(cust_EMAIL), '@\.|\+|=|\.C0M$|\.CO$|\.C$|\.C0$|'||CHR(38)||'|!|\$|#|\^|&|\*|\(|\)|^CD@|\?|<|>|~|`|\/|;|:|\d$|NOEMAIL|^NO$|^DECLINE$|@$|^@'))
+  and cust_division_id = '17'
+;
+
+-- first and last name 1 letter - NOT WORKING
+select /* +(parallel,4) */ *
+from dw_user.rdw_d_cust_360 
+where REGEXP_LIKE (cust_f_name, '(^[A-Z])\1\1') and 
+      REGEXP_LIKE (cust_l_name, '(^[A-Z])\1\1')
+and cust_div_nbr = '17'
+;
+--31850
+-- Invalid first and last name -- SEEMS TO WORK, NEED TO VALIDATE THE '
+select /* +(parallel,8) */ count(*) from dw_user.rdw_d_cust_360
+where  (regexp_like (UPPER(cust_f_name), '\d|\+|=|!|\$|#|\^|&|\*|\(|\)|\?|<|>|~|\/|;|:|\)|^REITMANS$|^DECLIN|CUSTOMER|STORE |UPSET|EMPLOY|GIFT|GIFT CARD|REFUSE|^SALE$|NO EMAIL|CARTE CADEAU|CADEAU|^TEST|NO NAME|^NO$|^NAME$|^CLIENT$')
+       or regexp_like (UPPER(cust_f_name), chr(39)))
+or (regexp_like (UPPER(cust_l_name), '\d|\+|=|!|\$|#|\^|&|\*|\(|\)|\?|<|>|~|\/|;|:|\)|^REITMANS$|^DECLIN|CUSTOMER|STORE |UPSET|EMPLOY|GIFT|GIFT CARD|REFUSE|^SALE$|NO EMAIL|CARTE CADEAU|CADEAU|^TEST|NO NAME|^NO$|^NAME$|^CLIENT$' ) 
+   or regexp_like (UPPER(cust_l_name), chr(39)))
+and cust_division_id = '17'
+;
