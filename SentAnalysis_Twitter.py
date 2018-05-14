@@ -9,11 +9,11 @@ class SentAnalysis_Twitter:
 
 
     def main():
-        consumerKey = 'sZg2zgWWjyNO3eeiP3tL4Muze'
-        consumerSecret = 'sLsX3RFYrTX0rKNfH2EwnYS31qmJp7arQ3KIkc8Gsj85h4kfKE'
-        search='@nationalbank'
+        consumerKey = YOUR_KEY
+        consumerSecret = YOUR_SECRECT
+        search=QUERY
         resultDF = pd.Dataframe()
-        fileName='twitter_sentiment.csv'
+        fileName=FILE_NAME+PATH
         delimiter='|'
         
         client = twitterConn(consumerKey, consumerSecret)
