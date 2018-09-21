@@ -1,13 +1,15 @@
-name := "challenge"
+name := "nifi"
 
-version := "1.0"
+version := "0.1"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.11"
 
-libraryDependencies ++= Seq(
-  "com.databricks" % "spark-csv_2.11" % "1.5.0",
-  "org.apache.spark" % "spark-core_2.11" % "2.0.0",
-  "org.apache.spark" %% "spark-sql" % "2.0.0",
-  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
-)
-
+libraryDependencies ++= {
+  val scalaTestV = "2.2.6"
+  Seq(
+    "com.typesafe.akka" %% "akka-stream" % "2.4.17",
+    "com.typesafe.akka" %% "akka-http" % "10.0.3",
+    "com.typesafe.akka" %% "akka-http-spray-json" % "10.0.0",
+    "io.spray" %%  "spray-json" % "1.3.2"
+  )
+}
