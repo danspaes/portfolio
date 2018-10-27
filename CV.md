@@ -7,6 +7,7 @@
 #### Work Experience
 
 **National Bank of Canada: March 2018 - Present**
+
 **Data Engineer**
 
 - Building ETL solutions using spark on scala Hadoop environment (Hortonworks HDP);
@@ -17,6 +18,7 @@
 _Technologies used: MariaDB, Scala, Spark, Spark-Streaming, HDP 2.5, Python 2.7, textblob, Jenkins, Jira, Hive, Hadoop, Docker, Nexus, Kafka, Agile (Scrum and Kanbam), Shell-Script, Unix environment._
 
 **Videotron Canada, Montreal: May 2017 – March 2018**
+
 **Senior Developer Technical Lead**
 
 - Optimization and creation of PL/SQL and Datastage jobs for data integration;
@@ -28,6 +30,7 @@ _Technologies used: MariaDB, Scala, Spark, Spark-Streaming, HDP 2.5, Python 2.7,
 _Technologies used: Netezza, Scala, Spark, PLSQL, HDP 2.5, SAS Studio, Business Objects, Python 2.7, NLTK, Oracle 10g, Data warehouse modeling Kimball approach, Agile (Scrum), Shell-Script, Unix environment._
 
 **Reitmans Canada, Montreal: May 2016 – May 2017**
+
 **Data Engineer**
 
 - Created and maintained ETL processes within Informatica Powercenter to extract data using java UDFs to create connectivity drivers from MongoDB, Google Analytics and Big Query to integrate with existing data on Oracle databases;
@@ -37,6 +40,7 @@ _Technologies used: Netezza, Scala, Spark, PLSQL, HDP 2.5, SAS Studio, Business 
 _Technologies used: Informatica 9.5.1, Java, Scala, Spark, MongoDB, Tableau Desktop, Python, sckit, NLTK, Oracle 10g, Data warehouse modeling Kimball approach, Agile (Scrum), Shell-Script, Unix environment. Microstrategy 9, Google Cloud Platform, Google Analytics_
 
 **EXIA, Saint-Hyacinthe: November 2014 - May 2016**
+
 **On-site Consultant – ETL Developer**
 
 - Developed Informatica components using Velocity framework, Java UDF transformations and PL/SQL packages under Agile Management concepts;
@@ -46,6 +50,7 @@ _Technologies used: Tableau Desktop, Control-M Scheduler, Informatica 9.5.1, Ora
 
 
 **Informatica, Rio de Janeiro: Sept 2011 - Nov 2014**
+
 **On-site Consultant – Data Integration Specialist**
 
 - Delivered Quality Assurance on the data, creating templates for data validation, and on the code creating user guides documentations and development templates;
@@ -55,6 +60,7 @@ _Technologies used: Tableau Desktop, Control-M Scheduler, Informatica 9.5.1, Ora
 _Technologies used: Informatica 9.5.1, Control-M Scheduler, Informatica Data Quality, Oracle 10g, flat-files, Shell-Script, Unix server, Data warehouse modeling Kimball approach, business object_
 
 **Accenture, Rio de Janeiro: Jan 2010 - Sept 2011**
+
 **On-site Consultant – Senior ETL Developer**
 
 - Responsible for optimization tunning and restructuration of existing Informatica processes;
@@ -65,6 +71,7 @@ _Technologies used: Informatica 9.5.1, Control-M Scheduler, Informatica Data Qua
 _Technologies used: Informatica 9.5.1, Control-M Scheduler, Teradata 10 BTEQ, T-Pump, Fast-Load, Multi-Load, Fast-Export, Oracle 10g, SAP R/3 connector, Shell-Scripts, Unix Server, Core Java_
 
 **Value Team, Rio de Janeiro: Jan 2006 - Dec 2009**
+
 **On-site Consultant – BI Developer**
 
 - Analyzed existing oracle production code to generate new Informatica ETL processes;
